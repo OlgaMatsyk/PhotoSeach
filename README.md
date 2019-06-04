@@ -1,1 +1,1 @@
-# PhotoSeach
+# PhotoSearch
