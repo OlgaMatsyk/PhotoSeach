@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    var searchResults = Array<Photo>()
+    var errorMessages = Array<String>()
 
     var searchBar:UISearchBar = {
         
-        let s = UISearchBar()
+        let s = UISearchBar(frame: .zero)
         s.searchBarStyle = UISearchBar.Style.minimal
         s.placeholder = "Search photo..."
         s.isTranslucent = false
@@ -28,6 +31,14 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
     }()
+    
+    private let searchService: PhotoSearchService = {
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "GiphyApiKey") as! String
+        let rapidApiKey = Bundle.main.object(forInfoDictionaryKey: "X-RapidAPI-Key") as! String
+
+        return PhotoSearchService(key: apiKey, rapidApiKey: rapidApiKey)
+    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,16 +79,47 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        searchService.findPhotos(query: searchBar.text ?? "") {
+            [unowned self] result in
+
+            switch result {
+            case .Success(let photos):
+                self.searchResults.removeAll()
+                self.searchResults.append(contentsOf: photos)
+            case .Error:
+                self.errorMessages.append("Error")
+            }
+            self.tableView.reloadData()
+        }
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = UITableViewCell()
+        let photo = self.searchResults[indexPath.row]
+        cell.textLabel?.text = photo.url.lastPathComponent
+        cell.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        cell.imageView?.image = nil
+        cell.imageView?.isHidden = false
+        
+        DispatchQueue.global(qos: .background).async {
+            if let imageData = NSData(contentsOf: photo.url) {
+                DispatchQueue.main.async {
+                        let image = UIImage(data: imageData as Data)
+                        cell.imageView?.image = image
+                        cell.setNeedsLayout()
+                }
+            }
+        }
+        
+       
+        return cell
+        
     }
 }
 

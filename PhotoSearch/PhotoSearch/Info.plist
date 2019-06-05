@@ -10,6 +10,10 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>GiphyApiKey</key>
+	<string>XTEFv8EzJkVSjJK62QUAxRVxWHqZMEnf</string>
+	<key>X-RapidAPI-Key</key>
+	<string>af63a1a080msh43155dde84e376fp1efe6fjsnfaa470376685</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
