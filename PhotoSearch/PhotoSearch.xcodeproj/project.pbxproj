@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03563F917C5501E46330E5C7 /* Pods_PhotoSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1438E096ABB46BBC5EED4A46 /* Pods_PhotoSearchTests.framework */; };
 		397AC3D922A7860000E83873 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AC3D822A7860000E83873 /* Photo.swift */; };
 		39F6A11922A66C34003B3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A11822A66C34003B3B7B /* AppDelegate.swift */; };
 		39F6A11B22A66C34003B3B7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A11A22A66C34003B3B7B /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 		39F6A14922A780F0003B3B7B /* PhotoSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A14822A780F0003B3B7B /* PhotoSearchService.swift */; };
 		39F6A14B22A782CB003B3B7B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A14A22A782CB003B3B7B /* Result.swift */; };
 		39F6A14D22A78425003B3B7B /* PhotoSearchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A14C22A78425003B3B7B /* PhotoSearchError.swift */; };
+		5F892112E053F0D7EB30B931 /* Pods_PhotoSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1159C94F62A1A9C27BABEB12 /* Pods_PhotoSearchUITests.framework */; };
+		D40F0EB17B1B3472D43A3712 /* Pods_PhotoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE580AF4ADCBE57E1217AB0 /* Pods_PhotoSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021FFD09BCD8FA438B296DDB /* Pods-PhotoSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchUITests/Pods-PhotoSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1159C94F62A1A9C27BABEB12 /* Pods_PhotoSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		127D5E379E5CF21920381F8A /* Pods-PhotoSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchTests/Pods-PhotoSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1438E096ABB46BBC5EED4A46 /* Pods_PhotoSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15778429310F47058A9C3B2F /* Pods-PhotoSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchTests/Pods-PhotoSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		198072525BE36D9A16B7D226 /* Pods-PhotoSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchUITests/Pods-PhotoSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		397AC3D822A7860000E83873 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		39F6A11522A66C34003B3B7B /* PhotoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F6A11822A66C34003B3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		39F6A14822A780F0003B3B7B /* PhotoSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchService.swift; sourceTree = "<group>"; };
 		39F6A14A22A782CB003B3B7B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		39F6A14C22A78425003B3B7B /* PhotoSearchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchError.swift; sourceTree = "<group>"; };
+		5FE580AF4ADCBE57E1217AB0 /* Pods_PhotoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF8EBFC0431CA3E04DD86E8 /* Pods-PhotoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearch/Pods-PhotoSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE9AB7532E9CDED88CD2E7D /* Pods-PhotoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearch/Pods-PhotoSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40F0EB17B1B3472D43A3712 /* Pods_PhotoSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03563F917C5501E46330E5C7 /* Pods_PhotoSearchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F892112E053F0D7EB30B931 /* Pods_PhotoSearchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,8 @@
 				39F6A12C22A66C35003B3B7B /* PhotoSearchTests */,
 				39F6A13722A66C35003B3B7B /* PhotoSearchUITests */,
 				39F6A11622A66C34003B3B7B /* Products */,
+				D91180F0EB2EA8B7C094D102 /* Pods */,
+				7202B8077A218C7551DEA44C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +159,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7202B8077A218C7551DEA44C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FE580AF4ADCBE57E1217AB0 /* Pods_PhotoSearch.framework */,
+				1438E096ABB46BBC5EED4A46 /* Pods_PhotoSearchTests.framework */,
+				1159C94F62A1A9C27BABEB12 /* Pods_PhotoSearchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D91180F0EB2EA8B7C094D102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCF8EBFC0431CA3E04DD86E8 /* Pods-PhotoSearch.debug.xcconfig */,
+				FDE9AB7532E9CDED88CD2E7D /* Pods-PhotoSearch.release.xcconfig */,
+				127D5E379E5CF21920381F8A /* Pods-PhotoSearchTests.debug.xcconfig */,
+				15778429310F47058A9C3B2F /* Pods-PhotoSearchTests.release.xcconfig */,
+				021FFD09BCD8FA438B296DDB /* Pods-PhotoSearchUITests.debug.xcconfig */,
+				198072525BE36D9A16B7D226 /* Pods-PhotoSearchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F6A13D22A66C35003B3B7B /* Build configuration list for PBXNativeTarget "PhotoSearch" */;
 			buildPhases = (
+				F57A0883948B9E894E4807E2 /* [CP] Check Pods Manifest.lock */,
 				39F6A11122A66C34003B3B7B /* Sources */,
 				39F6A11222A66C34003B3B7B /* Frameworks */,
 				39F6A11322A66C34003B3B7B /* Resources */,
+				1615ABB5E558C1679956E0BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F6A14022A66C35003B3B7B /* Build configuration list for PBXNativeTarget "PhotoSearchTests" */;
 			buildPhases = (
+				52E1DD0B0C5A660286EBD13D /* [CP] Check Pods Manifest.lock */,
 				39F6A12522A66C35003B3B7B /* Sources */,
 				39F6A12622A66C35003B3B7B /* Frameworks */,
 				39F6A12722A66C35003B3B7B /* Resources */,
@@ -184,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F6A14322A66C35003B3B7B /* Build configuration list for PBXNativeTarget "PhotoSearchUITests" */;
 			buildPhases = (
+				668EE5D8AE2CE805A857DD2B /* [CP] Check Pods Manifest.lock */,
 				39F6A13022A66C35003B3B7B /* Sources */,
 				39F6A13122A66C35003B3B7B /* Frameworks */,
 				39F6A13222A66C35003B3B7B /* Resources */,
@@ -266,6 +310,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1615ABB5E558C1679956E0BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSearch/Pods-PhotoSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSearch/Pods-PhotoSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E1DD0B0C5A660286EBD13D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoSearchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		668EE5D8AE2CE805A857DD2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoSearchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F57A0883948B9E894E4807E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39F6A11122A66C34003B3B7B /* Sources */ = {
@@ -442,15 +563,13 @@
 		};
 		39F6A13E22A66C35003B3B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCF8EBFC0431CA3E04DD86E8 /* Pods-PhotoSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -460,15 +579,13 @@
 		};
 		39F6A13F22A66C35003B3B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE9AB7532E9CDED88CD2E7D /* Pods-PhotoSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -478,17 +595,14 @@
 		};
 		39F6A14122A66C35003B3B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 127D5E379E5CF21920381F8A /* Pods-PhotoSearchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -499,17 +613,14 @@
 		};
 		39F6A14222A66C35003B3B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15778429310F47058A9C3B2F /* Pods-PhotoSearchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -520,16 +631,13 @@
 		};
 		39F6A14422A66C35003B3B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 021FFD09BCD8FA438B296DDB /* Pods-PhotoSearchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -540,16 +648,13 @@
 		};
 		39F6A14522A66C35003B3B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198072525BE36D9A16B7D226 /* Pods-PhotoSearchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
