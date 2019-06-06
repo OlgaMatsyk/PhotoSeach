@@ -13,5 +13,6 @@ enum PhotoSearchError: Error {
     case RequestError
     case ParseError
     case MalformedRequest
+    case NoSuchPhoto
 }
 

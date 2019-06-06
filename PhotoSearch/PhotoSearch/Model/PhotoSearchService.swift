@@ -51,9 +51,16 @@ class PhotoSearchService {
             DispatchQueue.main.async {
                 do {
                     // parse the results
-                    let result = try self.parseSearchResults(data: data!)
+                    let result = try self.parseSearchResults(data: data!, query: query)
                     
-                    callback(Result.Success(result))
+                    if (result.count > 0)
+                    {
+                        callback(Result.Success(result))
+                    }
+                    else
+                    {
+                        callback(Result.Error(PhotoSearchError.NoSuchPhoto))
+                    }
                 } catch {
                     callback(Result.Error(PhotoSearchError.ParseError))
                 }
@@ -64,7 +71,7 @@ class PhotoSearchService {
     }
     
     // parses the JSON data
-    private func parseSearchResults(data: Data) throws -> PhotoArray {
+    private func parseSearchResults(data: Data, query: String) throws -> PhotoArray {
         
         // convert the JSON response into a dictionary
         guard
@@ -73,24 +80,25 @@ class PhotoSearchService {
                 throw PhotoSearchError.ParseError
         }
         
-        let parsedPhotos = photos.map {
-            photoDict -> Photo? in
+        if (photos.count > 0)
+        {
             // parse each photo instance - if an error occurs, return nil
-            let images = photoDict["images"] as? NSDictionary
+            let firstPhotoDict = photos[0]
+            let images = firstPhotoDict["images"] as? NSDictionary
             let still = images?["480w_still"] as? NSDictionary
 
-            guard let imageUrl = still?["url"] as? String,
-                let name = still?["url"] as? String,
-                let url = URL(string: imageUrl) else {
-                    return nil
-                }
+            let imageUrl = still?["url"] as? String
+            let photo = Photo()
+            photo.title = query 
+            photo.url = imageUrl ?? ""
+            photo.ID = DBManager.sharedInstance.getDataFromDB().count
             
-                return Photo(title: name, url: url)
-            }
-            // unwrap optionals and remove nils
-            .compactMap { return $0! }
+            DBManager.sharedInstance.addData(object: photo)
+            
+            return [photo]
+        }
         
-        return parsedPhotos;
+        return []
     }
     
 

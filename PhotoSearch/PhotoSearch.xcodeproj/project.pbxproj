@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03563F917C5501E46330E5C7 /* Pods_PhotoSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1438E096ABB46BBC5EED4A46 /* Pods_PhotoSearchTests.framework */; };
 		397AC3D922A7860000E83873 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AC3D822A7860000E83873 /* Photo.swift */; };
+		39B7470D22A8F41F0091AB8C /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B7470C22A8F41F0091AB8C /* DBManager.swift */; };
 		39F6A11922A66C34003B3B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A11822A66C34003B3B7B /* AppDelegate.swift */; };
 		39F6A11B22A66C34003B3B7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6A11A22A66C34003B3B7B /* ViewController.swift */; };
 		39F6A12022A66C35003B3B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F6A11F22A66C35003B3B7B /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		15778429310F47058A9C3B2F /* Pods-PhotoSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchTests/Pods-PhotoSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		198072525BE36D9A16B7D226 /* Pods-PhotoSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSearchUITests/Pods-PhotoSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		397AC3D822A7860000E83873 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		39B7470C22A8F41F0091AB8C /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		39F6A11522A66C34003B3B7B /* PhotoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F6A11822A66C34003B3B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F6A11A22A66C34003B3B7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				39F6A14A22A782CB003B3B7B /* Result.swift */,
 				39F6A14C22A78425003B3B7B /* PhotoSearchError.swift */,
 				397AC3D822A7860000E83873 /* Photo.swift */,
+				39B7470C22A8F41F0091AB8C /* DBManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				39F6A14B22A782CB003B3B7B /* Result.swift in Sources */,
 				39F6A14D22A78425003B3B7B /* PhotoSearchError.swift in Sources */,
 				39F6A11922A66C34003B3B7B /* AppDelegate.swift in Sources */,
+				39B7470D22A8F41F0091AB8C /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +573,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -585,7 +592,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -602,7 +612,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -620,7 +634,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -637,7 +655,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -654,7 +676,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4FVAGQ3S;
 				INFOPLIST_FILE = PhotoSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matsyk.PhotoSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

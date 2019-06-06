@@ -10,9 +10,6 @@ import UIKit
 
 class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    var searchResults = Array<Photo>()
-    var errorMessages = Array<String>()
-
     var searchBar:UISearchBar = {
         
         let s = UISearchBar(frame: .zero)
@@ -71,11 +68,7 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // register a defalut cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String)
-    {
-
+        self.tableView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -83,40 +76,49 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
             [unowned self] result in
 
             switch result {
-            case .Success(let photos):
-                self.searchResults.removeAll()
-                self.searchResults.append(contentsOf: photos)
-            case .Error:
-                self.errorMessages.append("Error")
+            case .Success:
+                self.tableView.reloadData()
+
+            case .Error(let error):
+                print(error)
+                switch error {
+                case PhotoSearchError.ParseError:
+                    let alert = UIAlertController(title: "Error!", message: "Parse error.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                case PhotoSearchError.NoSuchPhoto:
+                    let alert = UIAlertController(title: "Error!", message: "Photo not found.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                default:
+                    break;
+                }
             }
-            self.tableView.reloadData()
         }
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searchResults.count
+        
+        return DBManager.sharedInstance.getDataFromDB().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        let photo = self.searchResults[indexPath.row]
-        cell.textLabel?.text = photo.url.lastPathComponent
+        let photo = DBManager.sharedInstance.getDataFromDB() [indexPath.row] as Photo
+        cell.textLabel?.text = photo.title
         cell.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         cell.imageView?.image = nil
         cell.imageView?.isHidden = false
         
-        DispatchQueue.global(qos: .background).async {
-            if let imageData = NSData(contentsOf: photo.url) {
-                DispatchQueue.main.async {
-                        let image = UIImage(data: imageData as Data)
-                        cell.imageView?.image = image
-                        cell.setNeedsLayout()
-                }
+        if let imageData = NSData(contentsOf: URL(string:photo.url)!) {
+            DispatchQueue.main.async {
+                    let image = UIImage(data: imageData as Data)
+                    cell.imageView?.image = image
+                    cell.setNeedsLayout()
             }
         }
-        
        
         return cell
         

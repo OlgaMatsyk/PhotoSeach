@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import RealmSwift
 
 typealias PhotoArray = [Photo]
 
-// Represents a single photo as returned by the 500px API
-struct Photo {
-    let title: String
-    let url: URL
+class Photo: Object {
+    @objc dynamic var ID = 0
+    @objc dynamic var title = ""
+    @objc dynamic var url = ""
+    
+    override static func primaryKey() -> String? {
+        return "ID"
+    }
 }
+
